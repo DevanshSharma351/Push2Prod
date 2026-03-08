@@ -81,6 +81,6 @@ docker compose up --build
 ```
 
 If everything is set up correctly:
-- The frontend should be accessible at `http://localhost`
+- The frontend should be accessible at `http://localhost:4173`
 - The backend API should respond at `http://localhost:3000/todos`
 - You should be able to add, complete, and delete tasks
