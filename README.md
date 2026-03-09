@@ -22,7 +22,7 @@ Things to think about:
 - The server listens on port `3000`
 - On startup, the app needs to run database migrations before the server starts
 
-> Hint: Prisma has two separate commands — one for development (`migrate dev`) and one meant for production deployments (`migrate deploy`). Use the right one here.
+> Hint: Prisma has two separate commands — one for development (`migrate dev`) and one meant for production deployments (`migrate deploy`). Use the right one here. make sure to add RUN apk add --no-cache openssl , COPY prisma ./prisma and RUN npx prisma generate ,to run properly(food for thought:why needed ?).
 
 ---
 
@@ -33,9 +33,6 @@ Containerize the React frontend.
 Things to think about:
 - The frontend is a Vite app — it needs to be **built** first, then **served**
 - You don't need Node.js to serve the final build — there's a much lighter option
-- This is a good use case for a **multi-stage build**
-
-> use npm run preview (production so that containers can listen from outside:runs on 4173)
 
 ---
 
